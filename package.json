@@ -1,0 +1,30 @@
+{
+  "name": "work_out_diary",
+  "version": "1.0.0",
+  "main": "prac.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sanitize-html": "^2.3.2",
+    "socket.io": "^3.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kth990303/WorkOutDiary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kth990303/WorkOutDiary/issues"
+  },
+  "homepage": "https://github.com/kth990303/WorkOutDiary#readme",
+  "description": ""
+}
