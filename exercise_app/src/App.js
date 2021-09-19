@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <p>
-          Hello
+          Hello Firebase!
       </p>
     </div>
   );
