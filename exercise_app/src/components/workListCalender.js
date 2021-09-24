@@ -3,8 +3,31 @@ import {Link, Route, Switch, BrowserRouter} from 'react-router-dom'
 import AddTodayExercise from './addTodayExercise';
 import './workListCalendar.css'
 
+function Work({work}){
+    return(
+        <div>
+            <h3>{work.date} 운동일지</h3>
+            
+            <li>{work.workName[0]}</li>
+            <li>{work.workName[1]}</li>
+            <li>{work.workName[2]}</li>
+        </div>
+    )
+}
 
-function WorkListCalender(){    
+function WorkListCalender(props){    
+    const works=[
+        {
+            id:1,
+            date:new Date('2021-09-24').toLocaleDateString(),
+            workName:["pushup", "pull-up", "wide push up"]
+        },
+        {
+            id:2,
+            date:new Date('2021-09-25').toLocaleDateString(),
+            workName:["pull up", "bench press"]
+        }
+    ];
     return(
         <div className="WorkListCalendar">
         <BrowserRouter>
@@ -19,7 +42,14 @@ function WorkListCalender(){
             </div>
         </BrowserRouter>
         <hr></hr>
-    </div>
+            <div className="Calendar">
+                {
+                    works.map(work=>(
+                        <Work work={work}></Work>
+                    ))
+                }
+            </div>
+        </div>
     )
 }
 
