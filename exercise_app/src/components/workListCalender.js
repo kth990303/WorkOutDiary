@@ -3,15 +3,12 @@ import {Link, Route, Switch, BrowserRouter} from 'react-router-dom'
 import AddTodayExercise from './addTodayExercise';
 import './workListCalendar.css'
 
-function TodayWorks({todayWorkNames}){
-    
-}
 
 function Work({work}){
     return(
         <div>
             <h3>{work.date} 운동일지</h3>
-            <TodayWorks todayWorkNames={work.workName}></TodayWorks>
+            {work.workName.map(workName=><li>{workName}</li>)}
         </div>
     )
 }
