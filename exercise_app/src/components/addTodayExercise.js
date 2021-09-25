@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+/* npm install react-datepicker --save
+   터미널에서 위 명령어 실행해야 사용 가능합니다.
+*/
 
 function AddTodayExercise() {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -41,8 +44,7 @@ function AddTodayExercise() {
         })
         console.log(workouts);
     }
-    // date:exercise배열(exercise마다의 set랑 rep)
-    // [{date, {exercise, sets, reps}},{date, {exercise, sets, reps}},[...]]
+
     return (
         <div className="submitBox">
             <h2>날짜를 선택하세요</h2>
