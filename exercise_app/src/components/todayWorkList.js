@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {Link, Route, Switch, BrowserRouter} from 'react-router-dom'
 import AddTodayExercise from './addTodayExercise';
 import './todayWorkList.css'
@@ -34,21 +34,23 @@ function TodayWorkList(props){
         }
     ];
     return(
-        <div className="WorkListCalendar">
+        <div className="TodayWork">
         <BrowserRouter>
             <div>
             <h1>2021. 9. 25.</h1>
             <h2>운동일지 다이어리</h2>
             </div>
             <div className="AddWork">
-                <Link to="/add" className="add">추가</Link>
+                <Link to="/add" className="add">
+                    <button>추가</button> 
+                </Link>
                 <Switch>
                     <Route path="/add" component={AddTodayExercise} />
                 </Switch>
             </div>
         </BrowserRouter>
         <hr></hr>
-            <div className="Calendar">
+            <div className="TodayWorkList">
                 {
                     works.map(work=>(
                         <Work work={work}></Work>
