@@ -13,6 +13,7 @@ function Work({work}){
 }
 
 function TodayWorkList(props){    
+    const todayApi=props.year+props.month+props.date;
     const works=[
         {
             id:1,
@@ -37,15 +38,15 @@ function TodayWorkList(props){
         <div className="TodayWork">
         <BrowserRouter>
             <div>
-            <h1>2021. 9. 25.</h1>
+            <h1>{props.year}. {props.month}. {props.date}</h1>
             <h2>운동일지 다이어리</h2>
             </div>
             <div className="AddWork">
-                <Link to="/add" className="add">
+                <Link to={`/${todayApi}/add`} className="add">
                     <button>추가</button> 
                 </Link>
                 <Switch>
-                    <Route path="/add" component={AddTodayExercise} />
+                    <Route path={`/${todayApi}/add`} component={AddTodayExercise} />
                 </Switch>
             </div>
         </BrowserRouter>
