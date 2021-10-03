@@ -27,7 +27,7 @@ function WorkListCalendar(props){
                     <Switch>
                         <Route 
                             path={`/${todayApi}`}
-                            render={() => <TodayWorkList year={fullYear} month={month} date={date} />}
+                            render={() => <TodayWorkList key={todayApi} year={fullYear} month={month} date={date} />}
                         />
                     </Switch>
                 </div>
