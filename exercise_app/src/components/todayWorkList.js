@@ -15,24 +15,24 @@ function Work({work}){
 function TodayWorkList(props){    
     const todayApi=props.year+props.month+props.date;
     const works=[
-        {
-            id:1,
-            date:new Date('2021-09-24').toLocaleDateString(),
-            exercise:{
-                workName: "push up",
-                sets: 3,
-                reps: 5
-            }
-        },
-        {
-            id:2,
-            date:new Date('2021-09-24').toLocaleDateString(),
-            exercise:{
-                workName: "pull up",
-                sets: 3,
-                reps: 10
-            }
-        }
+        // {
+        //     id:1,
+        //     date:new Date('2021-09-24').toLocaleDateString(),
+        //     exercise:{
+        //         workName: "push up",
+        //         sets: 3,
+        //         reps: 5
+        //     }
+        // },
+        // {
+        //     id:2,
+        //     date:new Date('2021-09-24').toLocaleDateString(),
+        //     exercise:{
+        //         workName: "pull up",
+        //         sets: 3,
+        //         reps: 10
+        //     }
+        // }
     ];
     return(
         <div className="TodayWork">
