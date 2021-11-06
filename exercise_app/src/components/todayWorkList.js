@@ -4,7 +4,7 @@ import AddTodayExercise from './addTodayExercise';
 import './todayWorkList.css'
 
 
-function Work({work}){
+const Work=({work})=>{
     return(
         <div>
             {<li>{work.exercise.workName}: {work.exercise.sets}sets {work.exercise.reps}reps</li>}
@@ -12,7 +12,7 @@ function Work({work}){
     )
 }
 
-function TodayWorkList(props){    
+const TodayWorkList=(props)=>{    
     const todayApi=props.year+props.month+props.date;
     const works=[
         // {

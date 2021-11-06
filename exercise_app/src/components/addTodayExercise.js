@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
    터미널에서 위 명령어 실행해야 사용 가능합니다.
 */
 
-function AddTodayExercise() {
+const AddTodayExercise=()=>{
     const [currentDate, setCurrentDate] = useState(new Date());
     const [inputs, setInputs] = useState({
         date: currentDate,
@@ -21,7 +21,8 @@ function AddTodayExercise() {
         [e.target.name]: e.target.value
         });
     }
-    const handleSave = () => {
+    const handleSave = (e) => {
+        e.preventDefault();
         const { date, exercise, sets, reps } = inputs;
         const workout = {
             date,
@@ -29,10 +30,9 @@ function AddTodayExercise() {
             sets,
             reps
         }
-        setWorkouts([
-            ...workouts,
-            workout
-        ])
+        setWorkouts((prevWorkouts)=>
+        [...prevWorkouts, workout]
+        )
         setInputs({
             date: currentDate,
             exercise:'',
@@ -44,6 +44,15 @@ function AddTodayExercise() {
 
     return (
         <div className="submitBox">
+            <div>
+                <ul>
+                    {workouts.map((v, idx)=>{
+                        return(
+                            `${v.date}날에 ${v.exercise}운동을 진행했어요!`
+                        )
+                    })}
+                </ul>
+            </div>
             <form>
                 <fieldset>
                     <legend><h3>운동을 열심히 하셨군요?</h3></legend>
